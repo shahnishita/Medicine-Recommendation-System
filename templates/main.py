@@ -2,10 +2,16 @@ import numpy as np
 import pandas as pd
 from flask import Flask,request,render_template
 import pickle
+from flask_cors import CORS  # Import CORS
+
+# flask app
+
+# Existing code here...
 
 
 # flask app
 app = Flask(__name__, template_folder='C:/Users/DELL/Desktop/ML projects/medicine recommendation system/templates')
+CORS(app, resources={r"/*": {"origins": "https://medicine-recommendation-system-x2wb-ggczsj9fq.vercel.app"}})  # Enable CORS for frontend URL
 
 
 
